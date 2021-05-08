@@ -144,7 +144,7 @@ class TestWithholdingTax(TransactionCase):
             .with_context(ctx)
             .create(
                 {
-                    "date": time.strftime("%Y") + "-07-15",
+                    "payment_date": time.strftime("%Y") + "-07-15",
                     "amount": 800,
                     "journal_id": self.journal_bank.id,
                     "payment_method_id": self.env.ref(
@@ -190,7 +190,7 @@ class TestWithholdingTax(TransactionCase):
             .with_context(ctx)
             .create(
                 {
-                    "date": time.strftime("%Y") + "-07-15",
+                    "payment_date": time.strftime("%Y") + "-07-15",
                     "amount": 600,
                     "journal_id": self.journal_bank.id,
                     "payment_method_id": self.env.ref(
